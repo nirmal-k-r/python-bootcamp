@@ -1,0 +1,31 @@
+body{
+   background-color: gray; 
+   margin-left: 50px;
+}
+
+h3{
+   color: green;
+}
+
+.blueTitle{
+   color:blue;
+}
+
+.biggerFont{
+   font-size: 40px;
+}
+
+/* p{
+   color: red;
+   font-size: 20px;
+} */
+
+#redText{
+   color: red !important;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 20px;
+}
+
+ul > li{
+   color:blueviolet;
+}
