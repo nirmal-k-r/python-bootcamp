@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+</head>
+    <body>
+      
+        <section class="flex-container">
+
+            <div class="box"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+       
+
+        </section>
+
+        <section class="flex-container">
+            <div class="container">
+                <h1>
+                    title 1
+                </h1>
+                <p>
+                    Their soothing purrs and warm cuddles provide comfort, while their adventurous spirits and quirky antics keep us endlessly entertained. As our friends and confidants, cats have secured a cherished place in our lives, leaving an indelible paw print on our hearts.
+                </p>
+
+            </div>
+
+        <div class="container">
+            <h1>
+                title 2 
+            </h1>
+            <p>
+                Their soothing purrs and warm cuddles provide comfort, while their adventurous spirits and quirky antics keep us endlessly entertained. As our friends and confidants, cats have secured a cherished place in our lives, leaving an indelible paw print on our hearts.
+            </p>
+
+        </div>
+       
+         
+
+        </section>
+
+        
+    </body>
+
+    <style>
+        .flex-container{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            height:800px;
+            /* align-items: center; */
+            align-content: space-around;
+         
+        }
+
+        .container{
+            width:45%;
+        }
+
+        .box{
+            background-color: brown;
+            width: 200px;
+            height: 200px;
+            order:0;
+            /* flex:1; */
+        }
+
+        .box2{
+            background-color: rgb(42, 46, 165);
+            width: 200px;
+            height: 200px;
+            order:1;
+            /* flex:2; */
+        }
+
+        .box3{
+            background-color: rgb(171, 188, 45);
+            width: 200px;
+            height: 200px;
+            order:2;
+            /* flex:3; */
+        }
+    </style>
+
+</html>
