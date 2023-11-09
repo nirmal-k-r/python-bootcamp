@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+</head>
+<body>
+    <h1>Numbers</h1>
+    <div id="container">
+       
+
+    </div>
+    
+</body>
+
+<script>
+    // var container= document.getElementById("container");
+    
+    // for (let i=0; i<5; i++){
+    //     var newElement=document.createElement("p");
+    //     newElement.innerHTML=i;
+    //     container.appendChild(newElement);
+
+    // }
+    
+    var total=0;
+    for (let i=0; i<5; i++){
+        num=prompt('Enter number');
+        total=total+parseInt(num);
+    }
+    var average=total/5;
+    alert(average);
+
+
+</script>
+
+</html>
