@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+        <div>Users:</div>
+        <ul>
+            <li>John</li>
+            <li>Pete</li>
+        </ul>
+    </body>
+
+    <script>
+       htmlNode=document.firstElementChild;
+       bodyNode=htmlNode.children[1];
+       divNode=bodyNode.firstElementChild;
+       console.log(divNode.textContent);
+
+       ulNode=bodyNode.children[1];
+       console.log(ulNode);
+       peteNode=ulNode.lastElementChild.textContent;
+       console.log(peteNode);
+
+
+        
+
+    </script>
+</html>

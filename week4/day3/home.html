@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" id="mainBody">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My page</title>
+
+
+        <style>
+            .dark{
+                background-color: black;
+                color: white;
+            }
+
+            .light{
+                background-color: white;
+                color:black;
+            }
+        </style>
+
+    </head>
+
+    <body id="mainBody" class="light">
+        <button onclick="swap()">Change color</button>
+        
+        <div class="topPage">
+            <h1 id='title'>My page</h1>
+            <p id="headerText">this is some text</p>
+          
+        </div>
+        <div id="gallery">
+            <img src="https://t4.ftcdn.net/jpg/00/97/58/97/360_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg" class="test test2 test3" id="myImage">
+
+        </div>
+    </body>
+
+    <footer class="footer">
+        <p style="text-align: center;">Copyright @2023</p>
+    </footer>
+
+    <script>
+        idNode=document.getElementById('title').textContent;
+        console.log(idNode);
+
+        let footerNode=document.getElementsByClassName('footer');
+        console.log(footerNode);
+
+        pNode=document.getElementById('headerText').innerHTML;
+        console.log(pNode);
+
+        img=document.querySelector('#myImage');
+        console.log(img);
+
+
+        document.querySelector('#title').innerHTML='Cats';
+        document.querySelector('#myImage').src='https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg';
+
+
+        //creating a new p element and appending to the div
+        gallery=document.querySelector('#gallery');
+
+        newPara=document.createElement('p'); // <p> 
+        newPara.textContent='this is some new text';
+
+        gallery.appendChild(newPara);
+
+        document.querySelector('.footer').remove();
+
+
+        selectedImage=document.querySelector('#myImage');
+        required=selectedImage.closest('#mainBody');
+        console.log(required);
+
+        document.querySelector('#title').style.color='red';
+
+        classes= document.querySelector('#myImage').getAttribute('class');
+        console.log(classes);
+        // classes= document.querySelector('#myImage').removeAttribute('class');
+        document.querySelector('#myImage').setAttribute('style','width: 200px;height:200px; border-radius:20px');
+        
+        document.querySelector('#myImage').classList.add('test4');
+        document.querySelector('#myImage').classList.remove('test');
+
+        document.querySelector('#myImage').classList.add('test5','test6');
+        document.querySelector('#myImage').classList.remove('test2','test5');
+
+        document.querySelector('#myImage').classList.replace('test6','test7');
+
+
+        function swap(){
+
+            var current_color=document.querySelector('#mainBody').getAttribute('class');
+            console.log(current_color);
+
+            if (current_color=='light'){
+                document.querySelector('#mainBody').setAttribute('class','dark');
+            }else{
+                document.querySelector('#mainBody').setAttribute('class','light');
+            }
+
+        }
+
+
+
+    </script>
+
+
+</html>

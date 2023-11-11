@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" id="mainBody">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forms</title>
+    </head>
+
+    <body>
+        <h1>Forms</h1>
+        <form id="loginForm" name="loginForm">
+            <label>Username</label>
+            <input type="text" name="username" id="username">
+            <br>
+            <label>Password</label>
+            <input type="password" name="password" id="password">
+            <br>
+            <label>Remember me</label>
+            <input type="checkbox" name="remember">
+            <label>Role</label>
+            <select name='role'>
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+                <option value="guest" selected>Guest</option>
+            </select>
+
+        </form>   
+
+        <button onclick="checkValues()">Check values</button>
+
+
+        <button onclick="addOption()">Add</button>
+    </body>
+
+    <script>
+
+        let loginForm=document.forms.loginForm;
+        console.log(loginForm);
+
+        let usernameField=loginForm.elements.username;
+        console.log(usernameField);
+        let passwordField=loginForm.elements.password;
+        console.log(passwordField);
+
+        console.log(passwordField.form);
+
+        let remember=loginForm.elements.remember;
+
+        let role=loginForm.elements.role;
+
+
+        function checkValues(){
+            console.log(usernameField.value,passwordField.value, remember.checked, role.value);
+        }
+
+        function addOption(){
+            let option = new Option('SuperAdmin','SuperAdmin');
+            role.add(option);
+        }
+    </script>
+</html>
