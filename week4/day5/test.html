@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Document Object</h1>
+<h2>The querySelector() Method</h2>
+
+<p>Add a background color to the first p element with class="example".</p>
+
+<h2 class="example">A heading</h2>
+<p class="example">A paragraph.</p> 
+
+<script>
+
+    // function styleElements(element,index,arr){
+    //     console.log(element);
+    //     element.style.backgroundColor = "red";
+    // }
+
+	elements=document.querySelectorAll('.example');
+    
+    elements.forEach(element => {
+        element.style.backgroundColor = "red";
+    });
+
+</script>
+
+</body>
+</html>
