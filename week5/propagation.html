@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>propagation</title>
+</head>
+<body>
+
+    <section id="section">
+        <div id="div">
+            <button id="btn">Button</button>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('section').addEventListener('click', clickSection,true);
+        document.getElementById('div').addEventListener('click', clickDiv,true);
+        document.getElementById('btn').addEventListener('click', clickBtn, true);
+
+
+        // function clicked(event){
+        //     // console.log('test');
+        //     console.log(event.target.id+' has been clicked');
+        // }
+
+        function clickSection(event){
+            console.log('section has been clicked');
+            event.stopPropagation();
+        };
+
+        function clickDiv(){
+            console.log('div has been clicked');
+        };
+
+        function clickBtn(){
+            console.log('Button has been clicked');
+        };
+
+    </script>
+</body>
+
+<script>
+
+   
+
+
+    
+
+
+</script>
+
+</html>

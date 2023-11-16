@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <h1 id="test" onmouseover="popup(this.innerHTML)">Black</h1>
+
+    <button onclick="changeColor()">Red</button>
+
+    <button id="button2">Blue</button>
+
+    <p id="para">this is some black text</p>
+
+
+</body>
+
+<script>
+
+    function changeColor(){
+        document.querySelector('#test').style.color='red';
+    };
+
+    document.querySelector('#button2').onclick= function() {
+        document.querySelector('#test').style.color='blue';
+    };
+
+
+    function popup(text){
+        alert(text+' has been clicked');
+    }
+
+    function paraedit(event){
+        document.querySelector("#para").style.backgroundColor='red';
+
+    }
+
+    document.querySelector("#para").addEventListener('click',paraedit);
+    document.querySelector("#para").addEventListener('mouseover',changeColor);
+
+
+    
+
+
+</script>
+
+</html>

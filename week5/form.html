@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+
+   <form id="myform" onsubmit="submission()">
+        <input type="text" name="name" id="name" placeholder="name" onchange="changed(this.value)" required>
+        <input type="text" name="email" id="email" placeholder="email" oninput="keyChange(this.value)"required>
+        <input type="number" name="phone" id="phone" placeholder="phone" min=0 max=10 required>
+
+
+        <button id="test">Test</button>
+        <input type="submit" value="submit">
+    </form>
+
+    <table >
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        <tr>
+            <td id="tableName"></td>
+            <td id="tableEmail"></td>
+            <td id="tablePhone"></td>
+    </table>
+
+
+    <script>
+        //this function changes the html content of the input with id tablename
+        function changed(value){
+            document.querySelector('#tableName').innerHTML=value;
+        }
+
+        function keyChange(value){
+            document.querySelector('#tableEmail').innerHTML=value;
+        }
+
+        function submission(){
+            alert('form submitted');
+        }
+
+        document.querySelector('#test').addEventListener('click',test);
+        function test(e){
+            e.preventDefault();
+            console.log('test');
+        }
+    
+    </script>
+
+
+</body>
+
+
+
+
+</html>
