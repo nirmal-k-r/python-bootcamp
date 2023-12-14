@@ -1,0 +1,56 @@
+body{
+    background-color: rgb(173, 159, 154);
+}
+
+.main{
+    background-color:rgb(214,207,204);
+    margin: 80px;
+    height: 675px;
+    width: auto;
+    padding: 150px;
+    /* width: auto; */
+}
+
+
+.button{
+    color:whitesmoke;
+    background-color:rgb(120, 180, 172);
+    border:4px solid rgb(40, 40, 161);
+    font-size: 26px;
+    text-align: center;
+    padding: 10px;
+
+    box-shadow: 0 5px 5px gray;
+}
+.buttonContainer{
+    text-align: center;
+}
+
+.container{
+    text-align: center;
+}
+
+
+.quotes{
+    font-size: 200px;
+    color:rgb(38, 38, 39);
+    display: inline;
+}
+
+.quote{
+    font-size: 24px;
+    color:rgb(69, 69, 69);
+    display: inline-block;
+}
+
+.author{
+    color:rgb(120, 180, 172);
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: right;
+
+}
+
+.hidden{
+    display: none;
+}

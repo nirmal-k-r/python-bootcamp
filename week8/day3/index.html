@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote</title>
+    <link rel="stylesheet" href="src/style.css">
+
+    
+</head>
+    <body>
+        <section class="main">
+            <div class="buttonContainer">
+                <button class="button" id="generate">Generate Quote</button>
+            </div>
+           <div class='container'>
+                <span class="quotes">"</span><p class="quote" id="quote"></p>
+                <p class="author" id="author"></p>
+           </div>
+
+           <div>
+                <label>Search author: </label> <input type="text" id="search_author"><button id="search_button">Search</button>
+                <div>
+                    <ol id="search_results">
+                        
+                    </ol>
+
+                    <p id="current_quote"></p>
+                    <div id="search_buttons" class="hidden">
+                        <button id="next" disabled>Next</button>
+                        <button id='previous'disabled>Previous</button>
+                    </div>
+                   
+                </div>
+           </div>
+
+           <div>
+            <h3>Functions</h3>
+            <button id="count_characters" disabled>Count characters</button> <label id="characters"></label><br>
+            <button id="count_characters_spaces" disabled>Count characters with spaces</button> <label id="characters_space"></label><br>
+            <button id="count_words" disabled>Count words</button> <label id="words"></label><br>
+            <button id="like_button" disabled>Likes</button> <label id="like_counter"></label><br>
+            
+           </div>
+
+           <div>
+                <h3>Add Quote</h3>
+                <form>
+                    <label>Quote</label><input type='text' id="quote_entered" required>
+                <label>Author</label><input type='text' id="author_entered" required>
+                <button id="add">Add</button>
+                </form>
+                
+           </div>
+        </section>
+
+    </body>
+
+    <footer>
+        <script src="src/main.js"></script>
+    </footer>
+</html>
