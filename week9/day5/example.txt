@@ -1,0 +1,26 @@
+write a program to calculate the average mark of all students from a class given an array of marks.
+
+
+input: marks[]
+output: avg
+process: 
+start
+    input required temp
+    input toast temp
+    if toast temp is equal to required temp 
+        then turn off heat
+        othereise turn on heat
+    end if
+
+end
+
+
+test  sett
+
+estt estt
+
+test this      sett shit
+testthis       settshit
+
+ehissttt       ehissttt
+
