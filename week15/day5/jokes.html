@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes</title>
+    
+</head>
+<body>
+
+    <h1>Jokes</h1>  
+    <span>Joke: </span><p id="joke"></p>
+    <button id="get-joke">Load new Joke</a>
+    
+</body>
+
+<footer>
+     <!-- import jquery library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   
+    <script>
+        $(document).ready(function(){ //wait for the document to be ready
+            $("#get-joke").click(function(){  //bind event listener
+
+                $.ajax({ //send an ajax request (http request)
+                    url: "https://api.chucknorris.io/jokes/random",
+                    type: "GET", //method
+                    success: function(response){ //if requrst successfult ececute the following
+                        // console.log(response);
+                        $("#joke").text(response.value); //select element with id joke and update its contents
+                    }
+                });
+            });
+        });
+    </script>
+</footer>
+
+</html>
+
