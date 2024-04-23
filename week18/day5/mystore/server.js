@@ -1,10 +1,19 @@
 //import your libraries
-const express = require('express');
+const fastify=require('fastify');
 const db=require('./database'); //this links the database
+const ProductRoutes=require('./routes/products'); //this links the routes
+
 
 
 //define server
-const server = express();
+const server = fastify({
+  logger: true
+})
+
+//link routes
+ProductRoutes.forEach((route,index) =>{
+  server.route(route);
+});
 
 
 //define routes
