@@ -25,7 +25,7 @@ exports.getAllPages= async (req,res) => {
 exports.getPage= async (req,res) => {
     id=req.params.id;
     const page= await Page.find({_id: id});
-    return ({page: page});
+    return ({page: page[0]});
 };
 
 exports.deletePage= async (req,res) => {

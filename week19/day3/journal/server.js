@@ -5,6 +5,11 @@ const pagesRoutes=require('./routes/pages.js');
 
 
 const server=fastify({ logger: true });
+// server.register(cors, { 
+//     // put your options here
+// });
+  
+// server.register(cors, { origin: true });
 
 usersRoutes.forEach((route, index) => {
     server.route(route);
@@ -13,6 +18,7 @@ usersRoutes.forEach((route, index) => {
 pagesRoutes.forEach((route, index) => {
     server.route(route);
 });
+
 
 server.get('/', async (req,res) => {
     res.json({message: 'API works'})
